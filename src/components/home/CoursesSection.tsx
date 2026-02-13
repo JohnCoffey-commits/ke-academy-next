@@ -14,7 +14,7 @@ const programs = [
         id: "term",
         title: "Term Courses",
         description: "Structured weekly programs that build strong foundations and measurable progress during the school term.",
-        image: "/images/termc.png",
+        image: "/images/termc.webp",
         href: "/courses?category=Term"
     },
     {

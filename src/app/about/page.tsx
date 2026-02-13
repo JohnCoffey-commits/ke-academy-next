@@ -35,7 +35,7 @@ const MARQUEE_ITEMS: MarqueeItem[] = [
     { src: "/images/about_us/07.png", alt: "KE Academy moment 7", position: "left bottom" },
     { src: "/images/about_us/08.png", alt: "KE Academy moment 8", position: "left bottom" },
     { src: "/images/about_us/09.png", alt: "KE Academy moment 9", position: "left bottom" },
-    { src: "/images/about_us/10.png", alt: "KE Academy moment 10", position: "left bottom" },
+    { src: "/images/about_us/10.webp", alt: "KE Academy moment 10", position: "left bottom" },
     { src: "/images/about_us/11.png", alt: "KE Academy moment 11", position: "left bottom" },
     { src: "/images/about_us/12.png", alt: "KE Academy moment 12", position: "left bottom" },
     { src: "/images/about_us/13.png", alt: "KE Academy moment 13", position: "left bottom" },
@@ -65,7 +65,7 @@ const FACULTY: FacultyMember[] = [
         role: "English & Academic Coach",
         bio: "With 20 years in English education, Scott supports students in reading, writing, and exam preparation, helping them develop critical thinking skills and successfully transition into selective schools and senior academic programs.",
         focus: "English Literacy & Exam Preparation",
-        image: "/images/teacher03.png",
+        image: "/images/teacher03.webp",
         position: "center 62%",
     },
 ];

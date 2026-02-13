@@ -44,7 +44,7 @@ export const courses: Course[] = [
         priceLabel: "$790.00 INCLUDING GST",
         highlights: ["Small-group interaction", "Personalised guidance", "Problem-solving practice"],
         description: "An intimate small-group setting where two learners collaborate and grow together.",
-        image: "/images/tut02.png",
+        image: "/images/tut02.webp",
         details: {
             overview: "This small-group course for two students retains personalised attention while encouraging collaboration. The program provides tailored learning beyond standard classes to boost academic achievement and build confidence.",
             focusedAreas: [
@@ -144,7 +144,7 @@ export const courses: Course[] = [
         priceLabel: "$690.00 INCLUDING GST",
         highlights: ["Public speaking", "Confidence building", "Structured levels"],
         description: "An expressive environment where students build language, confidence and performance skills.",
-        image: "/images/drama01.png",
+        image: "/images/drama01.webp",
         details: {
             overview: "Developed in partnership with a prestigious law firm, KE Academy’s drama program sharpens language precision, builds public speaking confidence and fosters emotional intelligence. The course offers a carefully structured progression and blends legal and educational expertise to provide students with tools for both stage and real-life expression.",
             focusedAreas: [
@@ -165,7 +165,7 @@ export const courses: Course[] = [
         priceLabel: "$490.00 INCLUDING GST",
         highlights: ["Global citizenship", "Cognitive development", "Cultural exploration"],
         description: "A global language program giving students an academic and cultural edge.",
-        image: "/images/french01.png",
+        image: "/images/french01.webp",
         details: {
             overview: "KE Academy’s French course is designed to give students a significant academic and cultural advantage. Learning French opens doors in diplomacy, arts, fashion and international business while enhancing memory and analytical skills. The program helps young learners thrive through structured instruction, engaging content and practical application.",
             focusedAreas: [
@@ -186,7 +186,7 @@ export const courses: Course[] = [
         priceLabel: "$260.00 INCLUDING GST",
         highlights: ["Language basics", "Cultural exposure", "Interactive learning"],
         description: "An immersive environment where students build foundational Mandarin skills and explore Chinese culture.",
-        image: "/images/mandarin01.png",
+        image: "/images/mandarin01.webp",
         details: {
             overview: "This Mandarin program offers 10 sessions per term, each lasting 1.5 hours, aimed at giving young learners a solid introduction to the Chinese language. Although currently marked “out of stock,” the course is designed to develop basic speaking, listening, reading and writing skills while introducing students to Chinese culture.",
             focusedAreas: [
@@ -228,7 +228,7 @@ export const courses: Course[] = [
         priceLabel: "$550.00 INCLUDING GST",
         highlights: ["Confidence & communication", "Speech training", "Debate skills"],
         description: "A supportive environment where students cultivate confidence, critical thinking and persuasive communication.",
-        image: "/images/speaking01.png",
+        image: "/images/speaking01.webp",
         details: {
             overview: "Designed to foster confidence and persuasive communication, KE Academy’s Public Speaking and Debating classes help students master effective speech through structured training, engaging improvisation tasks and dynamic presentation practice. The program also prepares students for AMEB Speech and Performance exams and a wide range of public speaking and debating competitions. Debate training introduces formal formats and rules, enabling students to argue logically, listen critically and rebut respectfully.",
             focusedAreas: [
@@ -270,7 +270,7 @@ export const courses: Course[] = [
         priceLabel: "$460.00 INCLUDING GST",
         highlights: ["Holistic curriculum", "Early literacy & numeracy", "Critical thinking"],
         description: "A comprehensive program that prepares young children for a confident start to primary school.",
-        image: "/images/ready01.png",
+        image: "/images/ready01.webp",
         details: {
             overview: "KE Academy’s **Ready for Kindy** program gives children a strong head start before they enter formal schooling. In once-a-week small-group classes, students receive comprehensive, structured learning across key developmental areas—including English, mathematics, logical thinking and public speaking—ensuring they are prepared academically and socially from day one of kindergarten.",
             focusedAreas: [
@@ -312,7 +312,7 @@ export const courses: Course[] = [
         priceLabel: "$490.00 INCLUDING GST",
         highlights: ["Hands-on STEAM projects", "3D printing & robotics", "Collaborative problem solving"],
         description: "A hands-on program where students explore science, technology, engineering, arts and mathematics through creative projects.",
-        image: "/images/stem01.png",
+        image: "/images/stem01.webp",
         details: {
             overview: "The STEAM and Coding course blends Science, Technology, Engineering, Arts and Mathematics to give students an exciting, hands-on introduction to real-world applications of science and innovation. Combining problem-solving, creativity and teamwork, the program encourages learners to explore the world through experiments, design challenges and interactive projects. Each session might involve activities ranging from 3D printing and robotics to collaborative problem-solving tasks that build resilience, communication and analytical skills.",
             focusedAreas: [

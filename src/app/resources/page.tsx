@@ -13,6 +13,8 @@ export default function ResourcesPage() {
                     muted
                     loop
                     playsInline
+                    preload="auto"
+                    poster="/videos/res_bg-poster.webp"
                     className="absolute inset-0 w-full h-full object-cover"
                     aria-hidden="true"
                 >

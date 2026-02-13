@@ -7,7 +7,6 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SearchableDropdown, type DropdownOption } from "@/components/ui/SearchableDropdown";
 import { PhoneInput, detectCountryFromLocale, COUNTRIES } from "@/components/ui/PhoneInput";
-import { FireworksOverlay } from "@/components/ui/FireworksOverlay";
 import { CAMPUSES } from "@/lib/data/campuses-22";
 import { courses } from "@/content/courses";
 import { cn } from "@/lib/utils";
@@ -95,7 +94,6 @@ export function InquirySection({ id }: { id?: string }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
     const [submitError, setSubmitError] = useState<string | null>(null);
-    const [showFireworks, setShowFireworks] = useState(false);
     const [selectedCampusLocation, setSelectedCampusLocation] = useState<DropdownOption | null>(
         CAMPUS_LOCATION_OPTIONS[0]
     );
@@ -207,7 +205,6 @@ export function InquirySection({ id }: { id?: string }) {
             }
 
             setSubmitStatus("success");
-            setShowFireworks(true);
         } catch (error) {
             console.error("Form submission error:", error);
             setSubmitError(
@@ -240,13 +237,7 @@ export function InquirySection({ id }: { id?: string }) {
     const messageRequired = !formData.campus && !formData.course;
 
     return (
-        <section id={id} className="relative bg-neutral-50 py-20 lg:py-28 scroll-mt-20">
-            {/* Fireworks celebration overlay */}
-            <FireworksOverlay
-                show={showFireworks}
-                onComplete={() => setShowFireworks(false)}
-            />
-
+        <section id={id} className="bg-neutral-50 py-20 lg:py-28 scroll-mt-20">
             <Container>
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
