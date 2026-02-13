@@ -6,7 +6,7 @@ import { resources } from "@/content/resources";
 export default function ResourcesPage() {
     return (
         <div className="bg-surface">
-            <section className="relative h-screen overflow-hidden">
+            <section className="relative h-screen overflow-hidden bg-black">
                 {/* Background Video */}
                 <video
                     autoPlay
@@ -14,7 +14,6 @@ export default function ResourcesPage() {
                     loop
                     playsInline
                     preload="auto"
-                    poster="/videos/res_bg-poster.webp"
                     className="absolute inset-0 w-full h-full object-cover"
                     aria-hidden="true"
                 >
