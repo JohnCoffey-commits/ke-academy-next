@@ -7,30 +7,49 @@ export default function ResourcesPage() {
     return (
         <div className="bg-surface">
             <section className="relative h-screen overflow-hidden bg-black">
-                {/* Background Video */}
+                {/* Background Video — hidden on mobile, visible md+ */}
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
                     preload="auto"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover hidden md:block"
                     aria-hidden="true"
                 >
                     <source src="/videos/res_bg.mp4" type="video/mp4" />
                 </video>
 
-                {/* Content */}
-                <div className="relative z-10">
+                {/* Desktop Content — visible md+ */}
+                <div className="relative z-10 hidden md:block">
                     <Container className="pt-6 pb-20">
-                        <h1 className="text-4xl md:text-6xl font-bold tracking-[0.22em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                        <h1 className="text-6xl font-bold tracking-[0.22em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                             RESOURCES
                         </h1>
                     </Container>
                 </div>
+
+                {/* Mobile Content — visible below md */}
+                <div className="relative z-10 flex flex-col items-center h-full md:hidden px-6 pt-[30vh]">
+                    <h1 className="text-5xl font-bold tracking-[0.18em] text-white">
+                        RESOURCES
+                    </h1>
+                    <p className="mt-5 text-sm font-light tracking-widest text-white/50">
+                        Scroll Down to Explore
+                    </p>
+                    <a
+                        href="#resources-cards"
+                        className="mt-5 flex items-center justify-center w-11 h-11 rounded-full border border-white/20 animate-bounce"
+                        aria-label="Scroll to resources"
+                    >
+                        <svg className="w-5 h-5 text-white/60" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                </div>
             </section>
 
-            <section className="relative z-10 -mt-10 bg-black shadow-[0_-18px_40px_-32px_rgba(15,23,42,0.35)]">
+            <section id="resources-cards" className="relative z-10 -mt-10 bg-black shadow-[0_-18px_40px_-32px_rgba(15,23,42,0.35)]">
                 <Container className="py-16">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {resources.map((resource) => {

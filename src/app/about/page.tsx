@@ -183,7 +183,7 @@ function MarqueeRow({ items, direction, rowIndex, reduceMotion }: MarqueeRowProp
                 {[...items, ...items].map((item, index) => (
                     <div
                         key={`${item.alt}-${index}`}
-                        className="relative h-32 w-56 md:h-40 md:w-72 lg:h-44 lg:w-80 xl:h-48 xl:w-96 flex-shrink-0 overflow-hidden rounded-2xl shadow-soft ring-1 ring-white/10"
+                        className="relative h-36 w-56 md:h-40 md:w-72 lg:h-44 lg:w-80 xl:h-48 xl:w-96 flex-shrink-0 overflow-hidden rounded-2xl shadow-soft ring-1 ring-white/10"
                     >
                         <Image
                             src={item.src}
@@ -271,7 +271,7 @@ export default function AboutPage() {
         <div className="bg-surface">
             {/* --- Marquee Section (Unchanged) --- */}
             <section
-                className="relative min-h-screen bg-[#0b1f33] text-white pt-6 pb-12 overflow-hidden"
+                className="relative min-h-screen bg-[#0b1f33] text-white pt-6 pb-4 md:pb-12 overflow-hidden"
             >
                 <div className="px-6 md:px-12">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-[0.22em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
@@ -279,7 +279,7 @@ export default function AboutPage() {
                     </h1>
                 </div>
 
-                <div className="mt-10 space-y-4">
+                <div className="mt-16 md:mt-10 space-y-7 md:space-y-4">
                     {marqueeRows.map((rowItems, rowIndex) => (
                         <MarqueeRow
                             key={`row-${rowIndex}`}
@@ -294,22 +294,22 @@ export default function AboutPage() {
 
             {/* --- Faculty Section (Redesigned) --- */}
             <section
-                className="relative h-[90vh] md:h-screen lg:h-[90vh] xl:h-[85vh] min-h-[600px] bg-white overflow-hidden"
+                className="relative h-auto md:h-screen lg:h-[90vh] xl:h-[85vh] min-h-0 md:min-h-[600px] bg-white overflow-hidden"
                 onWheel={handleWheel}
             >
                 <div className="grid h-full grid-cols-1 lg:grid-cols-2">
                     {/* Left Panel: Faculty Image & Title */}
                     <div
-                        className="relative flex flex-col items-center justify-center px-8 py-12 lg:py-0 transition-colors duration-300 ease-out"
+                        className="relative flex flex-col items-center justify-center px-6 md:px-8 pt-14 pb-6 md:py-12 lg:py-0 transition-colors duration-300 ease-out"
                         style={{ backgroundColor: facultyBg }}
                     >
-                        <span className="absolute top-8 left-8 text-[11px] uppercase tracking-[0.35em] text-white/60">
+                        <span className="absolute top-5 left-6 md:top-8 md:left-8 text-[11px] uppercase tracking-[0.35em] text-white/60">
                             Faculty
                         </span>
 
                         <div className="flex flex-col items-center z-10 w-full max-w-lg">
                             {/* Image Container - matched to Narrative card dimensions */}
-                            <div className="relative w-64 md:w-80 lg:w-[340px] aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-h-[60vh] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-[#0b1f33]">
+                            <div className="relative w-64 md:w-80 lg:w-[340px] aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-h-[38vh] md:max-h-[60vh] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-[#0b1f33]">
                                 <AnimatePresence mode="popLayout">
                                     <motion.div
                                         key={activeFaculty.image}
@@ -356,8 +356,8 @@ export default function AboutPage() {
                     </div>
 
                     {/* Right Panel: Narrative & Controls */}
-                    <div className="relative flex flex-col items-center justify-center bg-white px-8 lg:px-16 overflow-hidden">
-                        <span className="absolute top-8 left-8 text-[11px] uppercase tracking-[0.35em] text-primary-400 z-20">
+                    <div className="relative flex flex-col items-center justify-center bg-white px-6 md:px-8 lg:px-16 pt-10 pb-14 md:py-0 overflow-hidden">
+                        <span className="absolute top-4 left-6 md:top-8 md:left-8 text-[11px] uppercase tracking-[0.35em] text-primary-400 z-20">
                             Narrative
                         </span>
 
@@ -391,9 +391,9 @@ export default function AboutPage() {
 
 
                         {/* Content Card Container */}
-                        <div className="relative w-full max-w-lg aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-h-[60vh]">
+                        <div className="relative w-full max-w-lg aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-h-[44vh] md:max-h-[60vh]">
                             <div
-                                className="absolute inset-0 rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-center overflow-hidden shadow-sm z-10 transition-colors duration-300 ease-out"
+                                className="absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-8 lg:p-12 flex flex-col justify-center overflow-hidden shadow-sm z-10 transition-colors duration-300 ease-out"
                                 style={{ backgroundColor: facultyBg }}
                             >
                                 <motion.div
@@ -402,16 +402,16 @@ export default function AboutPage() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.3, ease: "easeOut" }}
                                 >
-                                    <p className="text-xs uppercase tracking-[0.3em] text-[#A68A8A] mb-3 md:mb-4">
+                                    <p className="text-xs uppercase tracking-[0.3em] text-[#A68A8A] mb-2 md:mb-4">
                                         {activeFaculty.role}
                                     </p>
-                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#2D2D2D] mb-4 md:mb-6">
+                                    <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#2D2D2D] mb-3 md:mb-6">
                                         {activeFaculty.name}
                                     </h2>
-                                    <p className="text-[#555] text-base md:text-lg lg:text-lg leading-relaxed mb-6 md:mb-8">
+                                    <p className="text-[#555] text-sm md:text-lg lg:text-lg leading-[1.75] md:leading-relaxed mb-4 md:mb-8">
                                         {activeFaculty.bio}
                                     </p>
-                                    <div className="pt-6 border-t border-[#E0D0D0]">
+                                    <div className="pt-4 md:pt-6 border-t border-[#E0D0D0]">
                                         <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A68A8A]">
                                             Focus: {activeFaculty.focus}
                                         </p>
